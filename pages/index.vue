@@ -1,7 +1,7 @@
 <template>
   <div class="imagen p-5">
     <h1 class="text-2xl text-center text-red-600 font-bold mt-2">
-      Choa
+      Choa Heroky
     </h1>
     <Tales />
   </div>
