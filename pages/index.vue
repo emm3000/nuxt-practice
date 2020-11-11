@@ -1,7 +1,7 @@
 <template>
   <div class="imagen p-5">
     <h1 class="text-2xl text-center text-red-600 font-bold mt-2">
-      Choa Heroky
+      Choa Heroky {{title}}
     </h1>
     <Tales />
   </div>
@@ -9,7 +9,15 @@
 
 <script>
 export default {
+  
 
+  async asyncData({$axios}) {
+    console.log("@@@@@@@@@@@@@@@@@@@@")
+    const title = await $axios.$get("https://jsonplaceholder.typicode.com/todos/1")
+    return {
+      title: title.title
+    }
+  },
 };
 </script>
 
@@ -17,7 +25,7 @@ export default {
 
 .imagen {
   min-height: 100vh;
-  background-image: url("https://hdwallpaperim.com/wp-content/uploads/2017/08/22/158305-K-pop-Asian-Choa-AOA.jpg");
+  background-image: url("https://c.wallhere.com/photos/e3/87/Lana_Rhoades_pornstar-1576499.jpg!d");
   background-repeat: no-repeat;
   background-size: cover;
   /* background-attachment: fixed; */
